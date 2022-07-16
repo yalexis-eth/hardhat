@@ -33,7 +33,7 @@ export async function runScript(
     });
 
     childProcess.once("close", (status) => {
-      log(`Script ${scriptPath} exited with status code ${status}`);
+      log(`Script ${scriptPath} exited with status code ${status ?? 0}`);
 
       resolve(status as number);
     });
