@@ -27,7 +27,6 @@ import {
 } from "../util/global-dir";
 import { getPackageJson, PackageJson } from "../util/packageInfo";
 
-import { applyWorkaround } from "../util/antlr-prototype-pollution-workaround";
 import {
   createFlamegraphHtmlFile,
   profileToFlamegraph,
@@ -45,8 +44,6 @@ import {
 } from "./hardhat-vscode-installation";
 
 const log = debug("hardhat:core:cli");
-
-applyWorkaround();
 
 const ANALYTICS_SLOW_TASK_THRESHOLD = 300;
 
